@@ -223,7 +223,7 @@ A API RESTful segue os seguintes endpoints. Todas as rotas (exceto `/api/login`)
 
 ### **Licença**
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes. (Você pode criar um arquivo LICENSE com o texto da licença MIT, se desejar).
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 -----
 
