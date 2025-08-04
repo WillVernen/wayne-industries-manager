@@ -31,13 +31,13 @@
 
 -----
 
-### 📖 **Sobre o Projeto**
+### **Sobre o Projeto**
 
 Este projeto foi desenvolvido como uma solução tecnológica para atender às necessidades específicas das Indústrias Wayne. Trata-se de uma plataforma robusta que centraliza o gerenciamento de recursos internos e o controle de acesso às instalações, com um dashboard visualmente atraente para monitoramento de dados relevantes.
 
 -----
 
-### ✨ **Funcionalidades**
+### **Funcionalidades**
 
   - **Sistema de Gerenciamento de Segurança:**
 
@@ -57,7 +57,7 @@ Este projeto foi desenvolvido como uma solução tecnológica para atender às n
 
 -----
 
-### 🛠️ **Tecnologias Utilizadas**
+### **Tecnologias Utilizadas**
 
 O projeto foi construído utilizando as seguintes tecnologias:
 
@@ -83,7 +83,7 @@ O projeto foi construído utilizando as seguintes tecnologias:
 
 -----
 
-### 📁 **Estrutura de Pastas**
+### **Estrutura de Pastas**
 
 O projeto está organizado da seguinte forma:
 
@@ -106,7 +106,7 @@ O projeto está organizado da seguinte forma:
 
 -----
 
-### 🚀 **Instalação e Execução**
+### **Instalação e Execução**
 
 Siga os passos abaixo para configurar e executar o projeto em sua máquina local.
 
@@ -119,7 +119,7 @@ Antes de começar, você precisará ter o [**Python 3.9**](https://www.python.or
 Se você estivesse baixando de um repositório Git (como o GitHub), usaria o comando abaixo. Como você já tem os arquivos, pode pular para o próximo passo.
 
 ```bash
-git clone https://github.com/seu-usuario/industrias_wayne.git
+git clone https://github.com/WillVernen/wayne-industries-manager.git
 cd industrias_wayne
 ```
 
@@ -157,7 +157,7 @@ source venv/bin/activate
 Com o ambiente virtual ativo, instale todas as bibliotecas necessárias de uma vez.
 
 ```bash
-pip install Flask Flask-SQLAlchemy PyJWT Werkzeug Flask-Cors
+pip install -r requirements.txt
 ```
 
 #### **3. Inicialização do Banco de Dados**
@@ -191,7 +191,7 @@ Navegue até a pasta `/frontend` e abra o arquivo `index.html` diretamente no se
 
 -----
 
-### 🔑 **Credenciais de Teste**
+### **Credenciais de Teste**
 
 Use os seguintes usuários para testar os diferentes níveis de acesso da plataforma:
 
@@ -206,7 +206,7 @@ Use os seguintes usuários para testar os diferentes níveis de acesso da plataf
 
 -----
 
-### 🔌 **Endpoints da API**
+### **Endpoints da API**
 
 A API RESTful segue os seguintes endpoints. Todas as rotas (exceto `/api/login`) requerem um token JWT enviado no cabeçalho `x-access-token`.
 
@@ -221,7 +221,7 @@ A API RESTful segue os seguintes endpoints. Todas as rotas (exceto `/api/login`)
 
 -----
 
-### ⚖️ **Licença**
+### **Licença**
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes. (Você pode criar um arquivo LICENSE com o texto da licença MIT, se desejar).
 
