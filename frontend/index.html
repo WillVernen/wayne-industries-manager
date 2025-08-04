@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayne Industries - Controle de Acesso</title>
+
+    <link rel="stylesheet" href="/frontend/css/style.css">
+
+    <link rel="icon" href="/frontend/img/Logo Industrias Wayne.png" type="image/png">
+</head>
+<body>
+    <div class="container login-container">
+
+        <header class="login-header">
+            <img src="/frontend/img/Logo Industrias Wayne.png" alt="Logo Indústrias Wayne" class="logo">
+            <h1>Sistema de Gerenciamento</h1>
+            <p>Acesso Restrito às Instalações</p>
+        </header>
+
+        <main>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Identificação de Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="ex: bruce" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Autenticar</button>
+            </form>
+
+            <p id="error-message" class="error-message"></p>
+        </main>
+    </div>
+
+    <script src="/frontend/js/auth.js"></script>
+</body>
+</html>

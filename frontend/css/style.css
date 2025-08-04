@@ -1,0 +1,278 @@
+/* frontend/css/style.css */
+
+/* --- Variáveis de Cor e Reset Básico --- */
+/* Usar variáveis CSS (--nome-da-variavel) torna a manutenção das cores muito mais fácil. */
+:root {
+    --bg-color: #121212; /* Um preto não tão forte, mais agradável aos olhos */
+    --surface-color: #1e1e1e; /* Cor para 'superfícies' como cards e modais */
+    --primary-color: #0d6efd; /* Um azul moderno e tecnológico */
+    --primary-hover-color: #0b5ed7; /* Um tom mais escuro para o efeito 'hover' do botão */
+    --text-color: #e0e0e0; /* Cor principal do texto (branco suave) */
+    --text-secondary-color: #a0a0a0; /* Cor para textos secundários e labels */
+    --border-color: #333; /* Cor para bordas sutis */
+    --danger-color: #dc3545; /* Cor para mensagens de erro e botões de perigo */
+}
+
+/* Reset básico para remover margens e paddings padrão do navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Estilos da Página de Login --- */
+.container {
+    width: 90%;
+    max-width: 400px; /* Limita a largura máxima do container de login */
+    margin: 5rem auto; /* Centraliza o container verticalmente (com margem no topo) e horizontalmente */
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Cantos arredondados */
+    text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.login-header .logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.login-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: var(--text-secondary-color);
+    margin-bottom: 2rem;
+}
+
+/* --- Componentes Genéricos (Inputs, Botões) --- */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left; /* Alinha o texto da label e do input à esquerda */
+}
+
+.input-group label {
+    display: block; /* Faz a label ocupar uma linha inteira */
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary-color);
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    /* Adiciona um destaque sutil quando o input está focado */
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out; /* Animação suave na troca de cor */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.error-message {
+    color: var(--danger-color);
+    margin-top: 1rem;
+    font-weight: bold;
+    height: 1.2rem; /* Reserva o espaço para a mensagem de erro para que o layout não "pule" */
+}
+
+/* --- Estilos do Dashboard --- */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem; /* Adiciona padding nas laterais */
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas pequenas */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    gap: 1rem; /* Espaçamento entre os elementos do header */
+}
+
+.dashboard-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-header .logo-small {
+    width: 40px;
+    height: 40px;
+}
+
+.dashboard-header h2 {
+    font-size: 1.5rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    margin-bottom: 1.5rem;
+}
+
+/* --- Tabela de Recursos --- */
+.table-wrapper {
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se a tabela for muito larga */
+}
+
+#recursos-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaço entre as bordas das células */
+}
+
+#recursos-table th, #recursos-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+#recursos-table th {
+    color: var(--text-secondary-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.actions-column {
+    width: 150px; /* Define uma largura fixa para a coluna de ações */
+}
+
+.actions-column button {
+    margin-right: 0.5rem;
+    background: none;
+    border: 1px solid var(--text-secondary-color);
+    color: var(--text-secondary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.actions-column button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Gráficos do Dashboard --- */
+.charts-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.chart-wrapper {
+    flex: 1; /* Faz com que cada gráfico tente ocupar o mesmo espaço */
+    min-width: 300px; /* Largura mínima para evitar que fiquem muito espremidos */
+    height: 350px;
+}
+
+/* --- Modal --- */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela, mesmo com rolagem */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    display: flex; /* Usamos flex para centralizar o conteúdo facilmente */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Começa invisível para a animação */
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--primary-color);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-secondary-color);
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: var(--text-color);
+}
+
+.input-group select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+}

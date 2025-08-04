@@ -1,0 +1,22 @@
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+.env/
+
+# Arquivos de cache e compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pastas de configuração de IDEs
+.vscode/
+.idea/
+
+# Arquivos de banco de dados
+*.db
+*.sqlite3
+
+# Pasta de instância do Flask
+instance/

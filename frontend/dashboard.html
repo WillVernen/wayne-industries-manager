@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Wayne Industries</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/frontend/img/Logo Industrias Wayne.png" type="image/png">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="/frontend/img/Logo Industrias Wayne.png" alt="Logo Indústrias Wayne" class="logo-small">
+                <h2>Painel de Controle e Gestão</h2>
+            </div>
+            <div class="user-info">
+                <span>Bem-vindo, <strong id="username-display"></strong>!</span>
+                <button id="logout-btn" class="btn btn-danger">Sair</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section id="dashboard-visualizacao" class="card">
+                <h3>Visão Geral da Segurança e Recursos</h3>
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <canvas id="recursosPorTipoChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="recursosPorStatusChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recursos-gerenciamento" class="card">
+                <h3>Gerenciamento de Recursos Internos</h3>
+                <button id="add-recurso-btn" class="btn btn-primary" style="display: none; margin-bottom: 1rem;">Adicionar Novo Recurso</button>
+
+                <div class="table-wrapper">
+                    <table id="recursos-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Quantidade</th>
+                                <th>Status</th>
+                                <th class="actions-column">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="recurso-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">Adicionar Novo Recurso</h3>
+            <form id="recurso-form">
+                <input type="hidden" id="recurso-id">
+                <div class="input-group">
+                    <label for="nome">Nome do Recurso</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" required>
+                        <option value="" disabled selected>Selecione um tipo...</option>
+                        <option value="Equipamento">Equipamento</option>
+                        <option value="Veículo">Veículo</option>
+                        <option value="Dispositivo de Segurança">Dispositivo de Segurança</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" min="1" value="1" required>
+                </div>
+                <div class="input-group">
+                    <label for="status">Status</label>
+                    <select id="status" required>
+                        <option value="Disponível">Disponível</option>
+                        <option value="Em Uso">Em Uso</option>
+                        <option value="Em Manutenção">Em Manutenção</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
